@@ -1,0 +1,36 @@
+{
+  "name": "genpark-spatial-obstacle-pointcloud-voxel-slicer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Edge LiDAR/depth point cloud voxel slicer computing 2.5D occupancy grids and ground clearances for mobile robots.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "edge-robotics",
+  "tags": [
+    "pointcloud",
+    "voxel-grid",
+    "lidar",
+    "obstacle-avoidance",
+    "spatial-navigation"
+  ],
+  "inputs": {
+    "frame_id": {
+      "type": "string"
+    },
+    "point_count": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "slice_run_id": {
+      "type": "string"
+    },
+    "occupied_voxels_count": {
+      "type": "integer"
+    },
+    "minimum_clearance_distance_m": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
